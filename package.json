@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "build":"rm -rf dist && parcel build index.html --no-minify --public-url ./"
+  },
+  "name": "StonePage",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/LoganWu365/StonePage.git",
+  "author": "loganwu <loganwu365@gmail.com>",
+  "license": "MIT"
+}

@@ -67,6 +67,7 @@ $(document).on('keypress',(e)=>{
   for(let i = 0;i<hashMap.length;i++){
     if(hashMap[i].logo.toLowerCase() === key){
       window.open(hashMap[i].url);
+      break;//只打开第一个符合的网页
     }
   }
 });

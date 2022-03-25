@@ -157,8 +157,9 @@ $(document).on('keypress', function (e) {
   for (var i = 0; i < hashMap.length; i++) {
     if (hashMap[i].logo.toLowerCase() === key) {
       window.open(hashMap[i].url);
+      break; //只打开第一个符合的网页
     }
   }
 });
 },{}]},{},["Bkkh"], null)
-//# sourceMappingURL=main.9a9bec8a.map
+//# sourceMappingURL=main.6334da42.map
