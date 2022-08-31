@@ -2,6 +2,7 @@ let $siteList = $('.siteList');
 let $lastLi = $(".siteList").find("li").eq(-1);
 let x = localStorage.getItem("x");
 let xObject = JSON.parse(x);
+console.log(xObject)
 let hashMap = xObject || [
   {
     logo: "B",
@@ -45,7 +46,7 @@ let render = () => {
 };
 render();
 $(".addWebsite").click(() => {
-  let url = window.prompt("请问你要输啥网址!");
+  let url = window.prompt("请问你要输什么网址");
   if(url.indexOf('www.') === 0){
     url = 'https://' + url;
   }else if(url.indexOf('www') === -1){
@@ -71,3 +72,6 @@ $(document).on('keypress',(e)=>{
     }
   }
 });
+$('input').on('keypress',function(e){
+  e.stopPropagation();
+  });
