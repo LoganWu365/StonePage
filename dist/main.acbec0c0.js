@@ -108,6 +108,7 @@ var $siteList = $('.siteList');
 var $lastLi = $(".siteList").find("li").eq(-1);
 var x = localStorage.getItem("x");
 var xObject = JSON.parse(x);
+console.log(xObject);
 var hashMap = xObject || [{
   logo: "B",
   url: "https://www.baidu.com"
@@ -134,7 +135,7 @@ var render = function render() {
 };
 render();
 $(".addWebsite").click(function () {
-  var url = window.prompt("请问你要输啥网址!");
+  var url = window.prompt("请问你要输什么网址");
   if (url.indexOf('www.') === 0) {
     url = 'https://' + url;
   } else if (url.indexOf('www') === -1) {
@@ -161,5 +162,8 @@ $(document).on('keypress', function (e) {
     }
   }
 });
+$('input').on('keypress', function (e) {
+  e.stopPropagation();
+});
 },{}]},{},["Bkkh"], null)
-//# sourceMappingURL=main.6334da42.map
+//# sourceMappingURL=main.acbec0c0.map
