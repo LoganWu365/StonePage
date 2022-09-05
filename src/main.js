@@ -2,16 +2,27 @@ let $siteList = $('.siteList');
 let $lastLi = $(".siteList").find("li").eq(-1);
 let x = localStorage.getItem("x");
 let xObject = JSON.parse(x);
-console.log(xObject)
 let hashMap = xObject || [
   {
-    logo: "B",
-    url: "https://www.baidu.com",
+    logo: "J",
+    url: "https://juejin.cn/",
   },
   {
     logo: "G",
-    url: "https://www.google.com",
+    url: "https://www.github.com",
   },
+  {
+    logo: "C",
+    url: "https://caniuse.com",
+  },
+  {
+    logo: "C",
+    url: "https://css-tricks.com",
+  },
+  {
+    logo: "Z",
+    url: "https://www.zhihu.com/",
+  }
 ];
 let simplifyUrl = (url) => {
   return url
@@ -46,7 +57,7 @@ let render = () => {
 };
 render();
 $(".addWebsite").click(() => {
-  let url = window.prompt("请问你要输什么网址");
+  let url = window.prompt("请输入网址");
   if(url.indexOf('www.') === 0){
     url = 'https://' + url;
   }else if(url.indexOf('www') === -1){
