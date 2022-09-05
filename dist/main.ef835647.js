@@ -108,13 +108,21 @@ var $siteList = $('.siteList');
 var $lastLi = $(".siteList").find("li").eq(-1);
 var x = localStorage.getItem("x");
 var xObject = JSON.parse(x);
-console.log(xObject);
 var hashMap = xObject || [{
-  logo: "B",
-  url: "https://www.baidu.com"
+  logo: "J",
+  url: "https://juejin.cn/"
 }, {
   logo: "G",
-  url: "https://www.google.com"
+  url: "https://www.github.com"
+}, {
+  logo: "C",
+  url: "https://caniuse.com"
+}, {
+  logo: "C",
+  url: "https://css-tricks.com"
+}, {
+  logo: "Z",
+  url: "https://www.zhihu.com/"
 }];
 var simplifyUrl = function simplifyUrl(url) {
   return url.replace("https://", "").replace("http://", "").replace("www.", "").replace(/\/.*/, ""); //删除/开头的内容
@@ -135,7 +143,7 @@ var render = function render() {
 };
 render();
 $(".addWebsite").click(function () {
-  var url = window.prompt("请问你要输什么网址");
+  var url = window.prompt("请输入网址");
   if (url.indexOf('www.') === 0) {
     url = 'https://' + url;
   } else if (url.indexOf('www') === -1) {
@@ -166,4 +174,4 @@ $('input').on('keypress', function (e) {
   e.stopPropagation();
 });
 },{}]},{},["Bkkh"], null)
-//# sourceMappingURL=main.acbec0c0.map
+//# sourceMappingURL=main.ef835647.map
